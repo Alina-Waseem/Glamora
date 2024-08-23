@@ -1,0 +1,46 @@
+.homePage {
+    background-image: url('../images/bg.webp'); 
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+}
+@media (max-width: 600px) {
+    .homePage {
+        min-height: 60vh; /* Adjust the height for small screens */
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.bgHeading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#9c8284c8;
+
+}
+@media (max-width: 600px) {
+    .bgHeading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    }
+}
+
+.bestProductHeading{
+    margin-top: 3rem;
+    margin-left: 3rem;
+    color:#9c8284c8;
+
+}
+@media (max-width: 600px) {
+    .bestProductHeading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    margin-left: 0;
+
+    }
+}
