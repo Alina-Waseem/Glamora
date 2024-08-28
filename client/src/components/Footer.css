@@ -1,0 +1,40 @@
+.line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: #9c8284c8;
+}
+@media (max-width: 600px) {
+    .line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: medium;
+    margin-left: 7%;
+
+    }
+}
+hr {
+    border: none;
+    border-top: 3px solid #ed8ca1;
+    margin: 15px auto;
+    width: 50rem;
+
+}
+@media (max-width: 600px) {
+    hr {
+        border: none;
+        border-top: 3px solid #ed8ca1;
+        margin: 15px auto;
+        width: 20rem;
+
+    }
+}
+.footer_copyright {
+    text-align: center;
+    padding: 1rem;
+    color: #9c8284c8;
+    font-size: 1.2rem;
+}
