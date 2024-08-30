@@ -6,15 +6,18 @@ import './HomePage.css';
 import Footer from '../components/Footer';
 
 const cardsData = [
-  { title: 'Dior Lipstick', image: require('../images/lipstick/dior2.webp') },
-  { title: 'Kay Beauty Foundation', image: require('../images/foundation/Kay_Beauty.jpg')},
-  { title: 'Huda Beauty Blush', image: require('../images/blush/hudabeauty.webp')},
-  { title: 'Kylie Highlighter', image: require('../images/highlighter/kylie.webp')},
-  { title: 'Huda Beauty Bronze', image: require('../images/contour/huda beauty.webp')},
-  { title: 'St London Powder', image: require('../images/Powder/stlondon2.webp')},
-  { title: 'Mac Eyeshadow', image: require('../images/eyeshadow/mac.jpg')},
-  { title: 'Kylie Mascara', image: require('../images/mascara/kylie.jpg')},
-  { title: 'Huda beauty Gloss', image: require('../images/lip gloss/huda2.jpg')},
+  { title: 'Lipstick', image: require('../images/lipstick/dior2.webp') },
+  { title: 'Foundation', image: require('../images/foundation/Kay_Beauty.jpg')},
+  { title: 'Blush', image: require('../images/blush/hudabeauty.webp')},
+  { title: 'Highlighter', image: require('../images/highlighter/kylie.webp')},
+  { title: 'Bronze', image: require('../images/contour/huda beauty.webp')},
+  { title: 'Powder', image: require('../images/Powder/stlondon2.webp')},
+  { title: 'Eyeshadow', image: require('../images/eyeshadow/mac.jpg')},
+  { title: 'Mascara', image: require('../images/mascara/kylie.jpg')},
+  { title: 'Gloss', image: require('../images/lip gloss/huda2.jpg')},
+  { title: 'Concealer', image: require('../images/concealer/chanel.jpg') },
+  { title: 'Primer', image: require('../images/primer/dior.jpg') },
+  { title: 'Concealer', image: require('../images/concealer/chanel2.jpg') },
 ];
 
 const HomePage = () => {

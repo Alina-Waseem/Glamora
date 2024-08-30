@@ -9,15 +9,35 @@ import MenuItem from '@mui/material/MenuItem';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import Popover from '@mui/material/Popover';
-import MenuIcon from '@mui/icons-material/Menu'; 
+import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from 'react-router-dom';
 
 const pages = ['Face', 'Eyes', 'Lips', 'Cheek'];
 
 const menuContent = {
-    Face: ['Foundation', 'Concealer', 'Powder', 'Setting Spray', 'Primer'],
-    Eyes: ['Mascara', 'Eyeliner', 'Eyeshadow', 'Eyebrow'],
-    Lips: ['Lipstick', 'Lip Gloss', 'Lip Liner'],
-    Cheek: ['Blush', 'Bronzer', 'Highlighter']
+    Face: [
+        { label: 'Foundation', link: '/faceProducts?filter=Foundation' },
+        { label: 'Concealer', link: '/faceProducts?filter=Concealer' },
+        { label: 'Powder', link: '/faceProducts?filter=Powder' },
+        { label: 'Setting Spray', link: '/faceProducts?filter=Setting Spray' },
+        { label: 'Primer', link: '/faceProducts?filter=Primer' },
+    ],
+    Eyes: [
+        { label: 'Mascara', link: '/eyesProducts?filter=Mascara' }, // Fixed path
+        { label: 'Eyeliner', link: '/eyesProducts?filter=Eyeliner' }, // Fixed path
+        { label: 'Eyeshadow', link: '/eyesProducts?filter=Eyeshadow' },
+        { label: 'Eyebrow Pencil', link: '/eyesProducts?filter=Eyebrow Pencil' },
+    ],
+    Lips: [
+        { label: 'Lipstick', link: '/lipsProducts?filter=Lipstick' },
+        { label: 'Lip Gloss', link: '/lipsProducts?filter=Lip Gloss' },
+        { label: 'Lip Liner', link: '/lipsProducts?filter=Lip Liner' },
+    ],
+    Cheek: [
+        { label: 'Blush', link: '/cheekProducts?filter=Blush' },
+        { label: 'Bronzer', link: '/cheekProducts?filter=Bronzer' },
+        { label: 'Highlighter', link: '/cheekProducts?filter=Highlighter' },
+    ]
 };
 
 function ResponsiveAppBar() {
@@ -44,7 +64,7 @@ function ResponsiveAppBar() {
     };
 
     return (
-        <AppBar position="static" sx={{ backgroundColor: 'white' }}> {/* Navbar color */}
+        <AppBar position="static" sx={{ backgroundColor: 'white' }}>
             <Container maxWidth="xl">
                 <Toolbar>
                     {/* Mobile Menu */}
@@ -75,8 +95,8 @@ function ResponsiveAppBar() {
                                     sx={{
                                         display: 'block',
                                         background: '#ffffff',
-                                        padding: { xs: '1rem 3rem', md: '0.85rem 2.5rem' }, // Mobile padding vs Desktop padding
-                                        fontSize: { xs: '0.875rem', md: '1rem' }, // Mobile font size vs Desktop font size
+                                        padding: { xs: '1rem 3rem', md: '0.85rem 2.5rem' },
+                                        fontSize: { xs: '0.875rem', md: '1rem' },
                                     }}
                                 >
                                     <Typography textAlign="center">{page}</Typography>
@@ -124,15 +144,19 @@ function ResponsiveAppBar() {
                     <Box sx={{ p: 2 }}>
                         <Typography variant="h6" gutterBottom>{currentPage} Products</Typography>
                         {menuContent[currentPage].map((item) => (
-                            <MenuItem 
-                                key={item} 
+                            <MenuItem
+                                key={item.label}
                                 onClick={handleClosePageMenu}
                                 sx={{
-                                    padding: { xs: '1rem 1.5rem', md: '0.85rem 2.5rem' }, // Mobile padding vs Desktop padding
-                                    fontSize: { xs: '0.875rem', md: '1rem' }, // Mobile font size vs Desktop font size
+                                    padding: { xs: '1rem 1.5rem', md: '0.85rem 2.5rem' },
+                                    fontSize: { xs: '0.875rem', md: '1rem' },
                                 }}
                             >
-                                <Typography textAlign="center">{item}</Typography>
+                                <Typography textAlign="center">
+                                    <Link to={item.link} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                        {item.label}
+                                    </Link>
+                                </Typography>
                             </MenuItem>
                         ))}
                     </Box>

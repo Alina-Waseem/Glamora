@@ -1,0 +1,22 @@
+.EyesCollection {
+    background-color: #ed8ca1;
+}
+
+.mainheading {
+    margin-left: 3rem;
+    color: white;
+    padding: 1rem;
+}
+
+.buttonContainer {
+    text-align: center; 
+    margin-top: 1rem; 
+}
+
+.viewMoreButton {
+    background-color: #ed8ca1;
+    color: #ffffff;
+    padding: 1rem;
+    border-radius: 5rem;
+    cursor: pointer;
+}

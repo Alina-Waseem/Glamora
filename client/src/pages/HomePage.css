@@ -62,4 +62,36 @@
     .cardsContainer {
         grid-template-columns: 1fr;
     }
+}.cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 60px;
+    
+}
+
+@media (min-width: 900px) {
+    .cardsContainer {
+        grid-template-columns: repeat(3, 1fr);
+        margin: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .cardsContainer {
+        grid-template-columns: 1fr;
+        margin: auto;
+    }
+}
+@media (min-width: 700px) {
+    .cardsContainer {
+        grid-template-columns: repeat(3, 1fr);
+        margin: auto;
+    }
+}
+@media (min-width: 1200px) {
+    .cardsContainer {
+        grid-template-columns: repeat(4, 1fr);
+        margin-left: 1rem;
+    }
 }
